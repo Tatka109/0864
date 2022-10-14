@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пример использования классов</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<!-- <link id="nightTheme" rel="stylesheet" href="css/nightTheme.css"> -->
+<link id="dayTheme" rel="stylesheet" href="css/dayTheme.css">
+</head>
+
+<body>
+
+<form id="generateCard" action="#" method="get">
+<button id="btnSwitchTheme" style="margin-bottom: 20px;">Включить тёмную тему</button>
+<button id="btnReset" style="margin-left: 40px;">Очистить локальное хранилище</button>
+<fieldset>
+<legend>Выберите вид карточки:</legend>
+
+<input id="cardPhoto" type="radio" name="cardTypes" value="card-photo">
+<label for="cardPhoto">С фото и текстом</label>
+
+<input id="cardNoPhoto" type="radio" name="cardTypes" value="card-no-photo">
+<label for="cardNoPhoto">Без фото</label>
+
+<input id="cardDecorative" type="radio" name="cardTypes" value="card-decorative">
+<label for="cardDecorative">Декоративная</label>
+</fieldset>
+</form>
+
+<p id="cardSize" class="card-size hide">Размер карточки: <span></span></p>
+
+<script src="js/script.js" async></script>
+</body>
+
+</html>
+

@@ -1,0 +1,186 @@
+:root {
+	box-sizing: border-box;
+	font-size: 16px;
+
+	--mainColor: hsl(224, 23%, 55%);
+	--darkColor: hsl(223, 47%, 23%);
+	--accentColor: hsl(245, 75%, 52%);
+	--shadowColor: hsla(245, 75%, 52%, 0.3);
+
+	--bgColor: hsl(225, 100%, 94%);
+	--pastelColor: hsl(225, 100%, 98%);
+	--white: #ffffff;
+}
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+h1,
+p {
+	margin: 0;
+}
+
+body {
+	font-family: 'Red Hat Display',
+		sans-serif;
+	color: var(--mainColor);
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.5s;
+}
+
+em {
+	font-style: normal;
+}
+
+.btn {
+	width: 100%;
+	padding: 10px 20px;
+
+	text-align: center;
+	font-weight: 500;
+
+	border-radius: 10px;
+	transition: all 0.5s;
+}
+
+.btn-primary {
+	background-color: var(--accentColor);
+	color: var(--white);
+	box-shadow: 0 10px 20px var(--shadowColor);
+}
+
+.btn-primary:hover {
+	transform: scale(1.05);
+	filter: hue-rotate(15deg);
+}
+
+.link {
+	font-size: 0.85rem;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+.link:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.link-cta {
+	color: var(--accentColor);
+}
+
+.link-cta:hover {
+	filter: hue-rotate(25deg);
+}
+
+.link-default {
+	color: var(--mainColor);
+	text-decoration: none;
+}
+
+.link-default:hover {
+	color: var(--darkColor);
+}
+
+.order-summary {
+	display: flex;
+	max-width: 1440px;
+	height: 900px;
+	margin: auto;
+	padding: 50px;
+
+	background-color: var(--bgColor);
+	background-image: url("../img/pattern-background-desktop.svg");
+	background-repeat: no-repeat;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	margin: auto;
+	padding: 50px;
+	padding-top: 250px;
+
+	border-radius: 20px;
+	background-color: var(--white);
+	background-image: url("../img/illustration-hero.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.card h1 {
+	font-weight: 900;
+	margin-bottom: 15px;
+	color: var(--darkColor);
+}
+
+.card p {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.card .plan {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 25px;
+	margin-bottom: 25px;
+
+	border-radius: 10px;
+	background-color: var(--pastelColor);
+}
+
+.plan .price {
+	display: flex;
+	flex-direction: column;
+	padding-left: 50px;
+
+	background-image: url("../img/icon-music.svg");
+	background-size: 40px;
+	background-repeat: no-repeat;
+	background-position: 0 center;
+}
+
+.price em {
+	margin-bottom: 5px;
+	font-weight: 700;
+	color: var(--darkColor);
+}
+
+.card .links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.links .btn {
+	margin-bottom: 25px;
+}
+
+@media (max-width: 767px) {
+	.order-summary {
+		padding: 25px;
+	}
+
+	.card {
+		width: 350px;
+		padding: 25px;
+		padding-top: 175px;
+	}
+
+	.card .plan {
+		padding: 10px;
+	}
+}

@@ -1,0 +1,28 @@
+
+html {
+	font-size: 12px;
+	font-family: "Verdana", sans-serif;
+}
+
+*,
+
+.button {
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #4676D7;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+    }
+
+.square {
+        border: 30px solid transparent;
+        border-image: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%) 20% / 1 / 0 stretch;
+        /*  border-image-source: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+          border-image-slice: 20%;
+          border-image-width: 1;
+          border-image-outset: 0;
+          border-image-repeat: stretch; */
+      }
+   

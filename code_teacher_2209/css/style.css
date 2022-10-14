@@ -1,0 +1,658 @@
+/* Общие стили (начало) */
+@font-face {
+	font-family: "Sunday";
+	src: url("../fonts/Sunday.woff2") format('woff2'),
+		url("../fonts/Sunday.woff") format('woff'),
+		url("../fonts/Sunday.ttf") format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+:root {
+	box-sizing: border-box;
+	font-size: 14px;
+
+	--white: #ffffff;
+	--whiteTransparent: rgba(255, 255, 255, 0.8);
+	--mainColor: #1a1a1a;
+	--accentColor: #ea4646;
+	--brightAccentColor: #e51a1a;
+	--darkAccentColor: #b71515;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+:focus {
+	outline: 2px solid var(--darkAccentColor);
+}
+
+body {
+	font-family: "Overpass", sans-serif;
+	color: var(--mainColor);
+	background-color: var(--white);
+}
+
+ul {
+	margin: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--mainColor);
+}
+
+a:hover {
+	color: var(--darkAccentColor);
+}
+
+a:active {
+	color: var(--brightAccentColor);
+}
+
+button {
+	background-color: transparent;
+	border: none;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+}
+
+h3 {
+	font-size: 1.86rem;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.container {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	max-width: 1440px;
+	margin: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.logo img {
+	max-width: 150px;
+}
+
+.title {
+	font-family: "Sunday";
+	/* font-family: "Roboto Slab", serif; */
+	font-weight: 500;
+	font-size: 2.29rem;
+	text-transform: uppercase;
+
+	margin-bottom: 50px;
+}
+
+.btn {
+	display: block;
+	padding: 15px 40px;
+	padding-bottom: 13px;
+	font-weight: 700;
+	line-height: 125%;
+	text-transform: uppercase;
+
+	transition: all 500ms;
+}
+
+.link-more {
+	display: block;
+	color: var(--accentColor);
+	padding-right: 35px;
+
+	transition: all 0.5s;
+}
+
+.link-more:hover {
+	transform: scale(1.1) translate(10px, 5px);
+}
+
+a.btn-cta {
+	color: var(--white);
+	background-color: var(--accentColor);
+}
+
+.btn-cta:hover {
+	background-color: var(--darkAccentColor);
+}
+
+.btn-cta:active {
+	background-color: var(--brightAccentColor);
+}
+
+.date {
+	display: flex;
+	flex-direction: column;
+
+	color: var(--accentColor) !important;
+}
+
+.date strong {
+	font-size: 1.43rem;
+}
+
+.date em {
+	font-size: 1rem;
+	font-style: normal;
+}
+
+.icon {
+	background-repeat: no-repeat;
+	background-position: 0 center;
+}
+
+.icon-menu {
+	background-image: url("../img/btn-menu.svg");
+}
+
+.icon-close {
+	background-image: url("../img/btn-close.svg");
+}
+
+.link-more.icon {
+	background-position: right center;
+}
+
+.icon-geo {
+	background-image: url("../img/icon-geo.svg");
+}
+
+.icon-time {
+	background-image: url("../img/icon-time.svg");
+}
+
+.icon-arrow {
+	background-image: url("../img/icon-arrow.svg");
+}
+
+.icon-inst {
+	background-image: url("../img/inst.svg");
+}
+
+.icon-fb {
+	background-image: url("../img/fb.svg");
+}
+
+.icon-vk {
+	background-image: url("../img/vk.svg");
+}
+
+/* Общие стили (конец) */
+
+/* Header (начало) */
+
+.btn-menu {
+	display: none;
+	width: 27px;
+	height: 20px;
+
+	background-image: url("../img/btn-menu.svg");
+	background-repeat: no-repeat;
+	font-size: 0;
+}
+
+header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	width: 100%;
+	height: 124px;
+
+	background-color: var(--white);
+}
+
+header .container {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+.main-menu {
+	margin-top: 50px;
+}
+
+.main-menu ul {
+	justify-content: space-between;
+}
+
+.main-menu .links {
+	display: flex;
+	width: 484px;
+}
+
+.main-menu .social-links {
+	display: none;
+}
+
+.main-menu a {
+	font-family: "Roboto Slab", serif;
+	font-weight: 500;
+	font-size: 0.86rem;
+
+	text-transform: uppercase;
+}
+
+/* Header (конец) */
+
+/* Promo (начало) */
+.promo {
+	height: 600px;
+
+	background-image: url("../img/bg-promo.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0 64%;
+}
+
+.promo .container {
+	align-items: flex-start;
+	padding: 60px 125px;
+}
+
+.promo-content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.promo-content .title,
+.promo-content p {
+	margin-bottom: 5px;
+	padding: 5px 20px;
+
+	color: var(--white);
+	background-color: var(--mainColor);
+}
+
+.promo-content .title {
+	font-size: 3.17rem;
+}
+
+.promo-content p {
+	font-size: 1.43rem;
+}
+
+.promo-content .date {
+	margin-bottom: 40px;
+	background-color: var(--whiteTransparent);
+}
+
+/* Promo (конец) */
+
+/* About-fest (начало) */
+
+.about-fest .container {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.about-fest .title {
+	text-align: center;
+}
+
+.about-fest-content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.about-fest-content h3 {
+	margin-bottom: 10px;
+}
+
+.about-fest-content .contacts,
+.about-fest-content .info,
+.about-fest-content .members {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.about-fest .contacts {
+	/* height: 270px; */
+}
+
+.contacts .date,
+.contacts .address {
+	margin-bottom: 15px;
+}
+
+.contacts .time {
+	margin-bottom: 30px;
+}
+
+.contacts strong {
+	margin-bottom: 12px;
+}
+
+.contacts em {
+	font-style: normal;
+	color: var(--mainColor);
+}
+
+.address a,
+.time b {
+	padding-left: 30px;
+	line-height: 140%;
+}
+
+.address a {
+	color: var(--mainColor);
+}
+
+.time b {
+	display: block;
+	color: #58595c;
+}
+
+.time span {
+	display: block;
+	padding-left: 30px;
+}
+
+.about-fest-content .info {
+	justify-content: space-between;
+	padding-left: 30px;
+	padding-right: 30px;
+	max-width: 730px;
+
+	box-shadow: inset 1px 0 0 var(--mainColor);
+}
+
+.info p,
+.members ul {
+	list-style-position: inside;
+	margin-bottom: 26px;
+	line-height: 140%;
+}
+
+.members ul {
+	list-style-type: disc;
+}
+
+/* About-fest (конец) */
+
+/* Медиа-запросы (начало) */
+
+@media (max-width: 1439px) {
+
+	p,
+	ul,
+	a {
+		font-size: 0.86rem;
+	}
+
+	h3 {
+		font-size: 1.43rem;
+	}
+
+	.link-more {
+		padding-right: 25px;
+	}
+
+	.link-more.icon {
+		background-position: right -5px;
+		background-size: 20px;
+	}
+
+	/* Header (начало) */
+	.btn {
+		padding: 10px 30px;
+		padding-bottom: 8px;
+		font-size: 0.86rem;
+	}
+
+	.title {
+		margin-bottom: 35px;
+		font-size: 1.86rem;
+	}
+
+	.main-menu a {
+		font-size: 0.72rem;
+	}
+
+	.logo-club img {
+		max-width: 128px;
+	}
+
+	.main-menu {
+		margin-top: 40px;
+	}
+
+	.main-menu .links {
+		max-width: 384px;
+	}
+
+	/* Header (конец) */
+
+	/* Promo (начало) */
+	.promo {
+		height: 400px;
+	}
+
+	.promo .container {
+		padding: 30px 55px;
+	}
+
+	.promo-content .title {
+		font-size: 2.43rem;
+	}
+
+	.promo-content p {
+		font-size: 1.14rem;
+	}
+
+	.date strong {
+		font-size: 1.14rem;
+	}
+
+	.date em {
+		font-size: 0.86rem;
+	}
+
+	/* Promo (конец) */
+
+	/* About-fest (начало) */
+
+	.about-fest .container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.about-fest-content .info {
+		flex-shrink: 5;
+		justify-content: flex-start;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.info p,
+	.members ul {
+		margin-bottom: 18px;
+	}
+
+	/* About-fest (конец) */
+}
+
+@media (max-width: 767px) {
+
+	h3 {
+		font-size: 1.14rem;
+	}
+
+	/* Header (начало) */
+	header {
+		height: 55px;
+	}
+
+	.logo img {
+		width: 75px;
+	}
+
+	.btn-menu {
+		display: block;
+		width: 36px;
+		height: 36px;
+
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	.main-menu {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-top: 0;
+
+		width: 360px;
+		height: 360px;
+		background-color: var(--accentColor);
+	}
+
+	.main-menu ul,
+	.logo-club {
+		display: none;
+	}
+
+	.main-menu .links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		margin: auto;
+		margin-top: 70px;
+		margin-bottom: 66px;
+		height: 150px;
+		max-width: 96px;
+	}
+
+	.main-menu a {
+		font-size: 0.86rem;
+
+		color: var(--white);
+	}
+
+	.main-menu .social-links {
+		display: flex;
+		flex-direction: row;
+		max-width: 114px;
+
+		margin: auto;
+		margin-top: 0;
+	}
+
+	.social-links .icon {
+		display: block;
+		width: 30px;
+		height: 30px;
+
+		font-size: 0;
+	}
+
+	/* Header (конец) */
+
+	/* Promo (начало) */
+
+	.promo {
+		background-size: cover;
+		background-position: auto 100%;
+	}
+
+	.promo .container {
+		padding: 30px 20px;
+	}
+
+	.promo-content .title {
+		width: 330px;
+		margin-bottom: 0;
+		font-size: 2.14rem;
+	}
+
+	.promo-content p:first-of-type {
+		display: none;
+	}
+
+	.promo-content .date {
+		margin-bottom: 20px;
+	}
+
+	/* Promo (начало) */
+
+	/* About-fest (начало) */
+
+	.title {
+		font-size: 1.28rem;
+	}
+
+	.about-fest .container {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.about-fest-content {
+		flex-direction: column;
+	}
+
+	.about-fest-content .info {
+		padding-left: 0;
+		padding-right: 0;
+		box-shadow: none;
+	}
+
+	.about-fest-content h3 {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.about-fest-content .contacts,
+	.about-fest-content .info,
+	.about-fest-content .members {
+		margin-bottom: 40px;
+		height: auto;
+	}
+
+	.contacts .date {
+		align-self: center;
+		text-align: center;
+	}
+
+	.contacts strong {
+		margin-bottom: 6px;
+	}
+
+	.contacts .address,
+	.contacts .time {
+		margin-left: 50px;
+	}
+
+	.contacts .time {
+		margin-bottom: 15px;
+	}
+
+	.contacts .btn {
+		align-self: center;
+	}
+
+	/* About-fest (конец) */
+}
